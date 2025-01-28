@@ -1,6 +1,10 @@
-# CursoNest2025
+# TypeScript introducción para Nest
+Este proyecto es el respaldo de lo que hicimos en la introducción de mi curso de Nest en la parte de introducción a TypeScript.
 
-## Instalamos Yarn : 
-### yarn create vite y luego ejecuto yarn para instalar dependencias
+## No olvidar ejecutar
+```
+yarn install
+yarn dev
+```
 
-### Luego con yarn dev levanta la app
+Para instalar y ejecutar el proyecto.
