@@ -15,7 +15,7 @@ export class CarsController {
 
 
     @Get(':id')
-    getCarById(@Param('id', ParseIntPipe) id: number) {
+    getCarById(@Param('id') id: string) {
         return this.carsService.getCarById(id);
     }
 
@@ -25,7 +25,7 @@ export class CarsController {
     }
 
     @Patch(':id')
-    updateCar(@Param('id', ParseIntPipe) id: number, @Body() body: any) {
+    updateCar(@Param('id') id: string, @Body() body: any) {
         return {
             id,
             ...body
@@ -33,7 +33,7 @@ export class CarsController {
     }
 
     @Delete(':id')
-    deleteCar(@Param('id', ParseIntPipe) id: number) {
+    deleteCar(@Param('id') id: string) {
         return {
             message: `Car with ID ${id} has been deleted`
         }
