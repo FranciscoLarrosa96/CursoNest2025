@@ -58,4 +58,14 @@ export class CarsService {
         return this.cars[index];
     }
 
+    deleteCar(id: string) {
+        if (!this.getCarById(id)) {
+            throw new NotFoundException('Car not found');
+        }
+        this.cars = this.cars.filter(car => car.id !== id);
+        return {
+            message: `Car with ID ${id} has been deleted`
+        }
+    }
+
 }
